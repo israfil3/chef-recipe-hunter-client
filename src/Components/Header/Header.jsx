@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './header.css'
 import Food from '../Allfood/Food';
+import Footer from '../Footer/Footer';
 
 const Header = () => {
     const [foods,setFood] = useState([]);
@@ -11,8 +12,8 @@ const Header = () => {
     },[])
     return (
         <>
-            <div>
-               <div className="carousel bar">
+        <div className=''>
+            <div className="carousel bar my-20">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaTmPC4N46eIxXNRuCHQpz570D94hTgwmUQg&usqp=CAU" className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -41,15 +42,16 @@ const Header = () => {
                     <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-                </div> 
-                <div className="card-area">
-                {
-                    foods.map(food =><Food key={food.id} food={food}></Food>
+            </div> 
 
-                )}
-                </div>
-                    <p>count:{foods.length}</p>
+            <h1 className='text-3xl text-center my-14 chef'>China Best Chef And Food Recipe</h1>
+            <div className='card-area sm:grid grid-cols px-10 gap-14'>
+               {
+                  foods.map(food =><Food key={food.id} food={food}></Food>
+
+              )}  
            </div>
+        </div>   
         </>
     );
 };

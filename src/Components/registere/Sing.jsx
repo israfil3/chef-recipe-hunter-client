@@ -14,8 +14,8 @@ const Sing = () => {
                     <input type="password" name="password" id="password" placeholder='Your password'/><br />
                     <input type="url" name="photo" id="photo" placeholder='Your photo url'/> <br />
                     <input className='btn' type="submit" value="Sing up" />
-                    <p>all ready you have a Account <Link to={"/login"}>Login now</Link></p>
-                    <hr className='w-64 mx-auto my-10 bg-amber-100'></hr>
+                    <p className='mt-5'>all ready you have a Account <Link to={"/login"} className='text-blue-600'>Login now</Link></p>
+                    <hr className='w-64 mx-auto my-10'></hr>
                 </form>
                 <button className='btn'><FaFacebook className='mx-3 text-2xl'/>Login with Facebook</button><br /><br />
                 <button className='btn'><FaGithub className='mx-3 text-2xl'/> Login with Github</button>   

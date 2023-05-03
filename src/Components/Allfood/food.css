@@ -1,0 +1,11 @@
+.food-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+}
+.text-area {
+    font-size: 20px;
+}
+.food-content {
+    width: 60%;
+}

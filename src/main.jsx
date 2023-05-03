@@ -11,6 +11,7 @@ import Home from './Components/Home/Home.jsx';
 import Blog from './Components/blog/Blog.jsx';
 import Sing from './Components/registere/Sing.jsx';
 import Login from './Components/login/Login.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Header></Header>
+      },
+      {
+        path:"/",
+        element:<Footer></Footer>
       },
       {
         path:"home",

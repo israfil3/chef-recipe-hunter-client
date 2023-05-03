@@ -5,5 +5,12 @@
 }
 .card-area {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+}
+.chef {
+    background: -webkit-linear-gradient(rgb(255, 0, 0), #1905f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

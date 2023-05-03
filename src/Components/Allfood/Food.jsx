@@ -6,11 +6,9 @@ const Food = ({food}) => {
     console.log(food)
 
     return (
-        <div className='food-content'>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                 <figure className="px-10 pt-10">
+        <div className='food-content w-96 h-full'>
+            <div className="card bg-base-100 shadow-xl food-img">
                         <img src={picture_url} alt="Shoes" className="rounded-xl" />
-                 </figure>
                  <div className="card-body items-center text-center">
                           <h2 className="card-title">Chef Name:{name}</h2>
                             <h4>Years of experience:{years_of_experience}</h4>

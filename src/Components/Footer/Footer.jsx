@@ -3,7 +3,7 @@ import './footer.css'
 
 const Footer = () => {
     return (
-        <div className='bg-slate-200 p-20 mt-24'>
+        <div className='bg-slate-200 p-20'>
            <div className="flex justify-center items-center">
                 <div className="">
                     <h1 className='text-2xl my-5'>Food</h1>

@@ -12,6 +12,7 @@ import Blog from './Components/blog/Blog.jsx';
 import Sing from './Components/registere/Sing.jsx';
 import Login from './Components/login/Login.jsx';
 import Footer from './Components/Footer/Footer.jsx';
+import Recipe from './Components/Recipe/Recipe.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login></Login>
+      },
+      {
+        path:"/recipe/:id",
+        element:<Recipe></Recipe>,
       }
   ]
   },

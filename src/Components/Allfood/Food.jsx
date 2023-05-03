@@ -1,5 +1,6 @@
 import React from 'react';
-import './food.css'
+import './food.css';
+import { Link } from 'react-router-dom';
 
 const Food = ({food}) => {
     const {id,likes,name,number_of_recipes,picture_url,years_of_experience,recipes} = food;
@@ -15,7 +16,7 @@ const Food = ({food}) => {
                          <h1>Recipes items:{recipes.length}</h1>
                             <h1>Total Like:{likes}</h1>
                         <div className="card-actions">
-                        <button className="btn btn-primary">View Recipes</button>
+                        <button className="btn btn-primary"><Link to={`/recipe/${id}`}>View Recipes</Link></button>
                         </div>
                 </div>
             </div>

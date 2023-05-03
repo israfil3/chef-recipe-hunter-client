@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './header.css'
+import Food from '../Allfood/Food';
 
 const Header = () => {
-    const [food,setFood] = useState([]);
+    const [foods,setFood] = useState([]);
     useEffect(()=>{
         fetch(`http://localhost:3000/data`)
         .then(res=> res.json())
@@ -41,10 +42,13 @@ const Header = () => {
                     </div>
                 </div>
                 </div> 
+                <div className="card-area">
                 {
-                    food.map()
-                }
-                    <p>count:{food.length}</p>
+                    foods.map(food =><Food key={food.id} food={food}></Food>
+
+                )}
+                </div>
+                    <p>count:{foods.length}</p>
            </div>
         </>
     );

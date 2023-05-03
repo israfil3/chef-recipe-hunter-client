@@ -3,3 +3,7 @@
     width: 800px;
     height: 400px;
 }
+.card-area {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}

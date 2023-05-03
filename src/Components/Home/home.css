@@ -1,0 +1,10 @@
+.heading h1 {
+    background: -webkit-linear-gradient(rgb(255, 0, 0), #1905f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .link a{
+    font-size: 24px;
+    margin-right: 15px;
+    color: rgb(51, 0, 255);
+  }

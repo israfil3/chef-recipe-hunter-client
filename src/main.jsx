@@ -13,6 +13,7 @@ import Sing from './Components/registere/Sing.jsx';
 import Login from './Components/login/Login.jsx';
 import Footer from './Components/Footer/Footer.jsx';
 import Recipe from './Components/Recipe/Recipe.jsx';
+import AuthProvider from './Components/authprovider/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+        <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

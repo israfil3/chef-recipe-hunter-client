@@ -34,9 +34,6 @@ const Sing = () => {
 
 
     }
-
-
-
     // google sing method
     const singGoogle = () => {
         signInWithPopup(auth, googleProvider)
@@ -90,8 +87,8 @@ const Sing = () => {
                     <p className='mt-5'>all ready you have a Account <Link to={"/login"} className='text-blue-600'>Login now</Link></p>
                     <hr className='w-64 mx-auto my-10'></hr>
                 </form>
+                <p className='text-red-500 my-2'>{gitError}</p>
                 <button className='btn' onClick={singGoogle}><FaGoogle className='mx-3 text-2xl'/>Login with Google</button><br /><br />
-                <p>{gitError}</p>
                 <button className='btn' onClick={githubSing}><FaGithub className='mx-3 text-2xl'/> Login with Github</button>   
         </div>
 

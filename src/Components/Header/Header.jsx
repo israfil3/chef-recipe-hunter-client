@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 const Header = () => {
     const [foods,setFood] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:3000/data`)
+        fetch(`https://myapp-israfil3.vercel.app/data`)
         .then(res=> res.json())
         .then(data=>setFood(data))
     },[])

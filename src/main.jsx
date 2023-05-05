@@ -49,8 +49,9 @@ const router = createBrowserRouter([
         element:<Login></Login>
       },
       {
-        path:"/recipe/:id",
+        path:"/data/:id",
         element:<Recipe></Recipe>,
+        loader:({params})=>fetch(`https://myapp-israfil3.vercel.app/data/${params.id}`)
       }
   ]
   },

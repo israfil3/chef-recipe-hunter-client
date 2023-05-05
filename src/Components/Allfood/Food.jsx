@@ -5,7 +5,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Food = ({food}) => {
     const {id,likes,name,number_of_recipes,picture_url,years_of_experience,recipes} = food;
-    console.log(food)
 
     return (
         <div className='food-content w-96 h-full'>

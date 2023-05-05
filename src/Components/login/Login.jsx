@@ -1,9 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../authprovider/AuthProvider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
-    const { logIn } = useContext(AuthContext)  
+    const { logIn } = useContext(AuthContext) ;
+    const navigate = useNavigate() 
+    const location = useLocation();
+
+    const [man,setMan] = useState('');
+    const [error,setError] = useState('');
+
+    const from = location.state?.from?.pathname || '/';
+
     const logHandle = (event) => {
               event.preventDefault()
               const email = event.target.email.value;
@@ -13,10 +22,15 @@ const Login = () => {
               .then((result) =>{
                 const logUser = result.user;
                 event.target.reset();
-                console.log(logUser);
+                navigate(from , {replace: true});
+                setMan(logUser);
+                setError('')
+                
               })
-              .then((error)=>{
-                console.log(error)
+              .catch((error)=>{
+                const errorMessage = error.message;
+                setError(errorMessage)
+                setMan('')
              })
     }
     return (
@@ -45,6 +59,8 @@ const Login = () => {
                                 </label>
                                 </div>
                                 <div className="form-control mt-6">
+                                <p className='text-red-700 my-4' >{error}</p>
+                                 <p className='text-green-700'>{man}</p>
                                 <button className="btn btn-primary">Login</button>
                                 </div>
                         </form>

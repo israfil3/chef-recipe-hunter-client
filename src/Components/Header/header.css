@@ -14,3 +14,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+@media only screen and (max-width: 557px) {
+    .card-area {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .bar {
+        margin: 0px auto;
+        width: auto;
+        height: auto;
+    }
+  }

@@ -8,3 +8,15 @@
     margin-right: 15px;
     color: rgb(51, 0, 255);
   }
+  @media only screen and (max-width: 557px) {
+       .heading {
+
+       }
+       .lk {
+          margin: 10px 0px;
+       }
+       .btn {
+        margin: 10px 0px;
+       }
+
+  }

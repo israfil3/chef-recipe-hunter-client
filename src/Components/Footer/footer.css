@@ -1,0 +1,11 @@
+/* .footer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+} */
+
+
+@media only screen and (max-width: 557px) {
+    .footer {
+       grid-template-columns: repeat(1,fr);
+    }
+  }

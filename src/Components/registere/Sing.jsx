@@ -68,7 +68,7 @@ const Sing = () => {
     }
     return (
         <>
-        <div className='bg-slate-300 px-32 text-center'>
+        <div className='bg-slate-300 lg:px-32 text-center'>
             <h1 className="text-3xl font-bold text-center my-5">Please sing up</h1>
                 <form onSubmit={submitSing} className='form-area'>
                     <input type="text" name="name" id="name" placeholder='Your name' required/><br />

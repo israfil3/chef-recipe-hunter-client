@@ -14,8 +14,8 @@ const Recipe = () => {
     return (
         <div >
            <div className="card shadow-xl bg-slate-300">
-            <figure><img className='w-[40%] mt-10' src={newData.selectedData.picture_url} alt="Album"/></figure>
-            <div className="card-body px-40">
+            <figure><img className='lg:w-[40%] mt-10' src={newData.selectedData.picture_url} alt="Album"/></figure>
+            <div className="card-body lg:px-40">
                 <h2 className="card-title text-2xl text-center">Name:{newData.selectedData.name}</h2>
                 <h3 className='text-2xl'><span className='text-2xl'>Description:</span> {newData.selectedData.description}</h3>
                 <p className='text-2xl'><span className='text-2xl'>Like:</span>  {newData.selectedData.likes}</p>
@@ -35,10 +35,8 @@ const Recipe = () => {
                 }
                 <div className="card-actions justify-end">
                 </div>
-                <div>
                     <button onClick={notify} className="btn btn-outline btn-error w-52">favorite</button>
                     <ToastContainer />
-                </div>
             </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import './footer.css'
+import './footer.css';
 
 const Footer = () => {
     return (
         <div className='bg-slate-200 p-20'>
-           <div className="flex justify-center items-center">
+           <div className="lg:grid lg:grid-cols-4 footer">
                 <div className="">
                     <h1 className='text-2xl my-5'>Food</h1>
                     <p>Food is any substance consumed by <br /> an organism for nutritional support. <br /> Food is usually of plant, animal, <br /> or fungal origin, and contains essential nutrients,</p>

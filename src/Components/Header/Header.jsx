@@ -45,7 +45,7 @@ const Header = () => {
             </div> 
 
             <h1 className='text-3xl text-center my-14 chef'>China Best Chef And Food Recipe</h1>
-            <div className='card-area sm:grid grid-cols px-10 gap-14 mb-10'>
+            <div className='card-area sm:grid px-10 gap-14 mb-10 '>
                {
                   foods.map(food =><Food key={food.id} food={food}></Food>
 

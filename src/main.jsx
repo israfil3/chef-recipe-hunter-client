@@ -14,6 +14,7 @@ import Login from './Components/login/Login.jsx';
 import Footer from './Components/Footer/Footer.jsx';
 import Recipe from './Components/Recipe/Recipe.jsx';
 import AuthProvider from './Components/authprovider/AuthProvider.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/data/:id",
-        element:<Recipe></Recipe>,
+        element:<PrivateRoute><Recipe></Recipe></PrivateRoute>,
         loader:({params})=>fetch(`https://myapp-israfil3.vercel.app/data/${params.id}`)
       }
   ]

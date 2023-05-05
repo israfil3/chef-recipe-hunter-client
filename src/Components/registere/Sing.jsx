@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './sing.css';
 import {FaGoogle,FaGithub} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup } from "firebase/auth";
 import app from '../../firebase/firebase.config';
 import { AuthContext } from '../authprovider/AuthProvider';
@@ -9,7 +9,14 @@ import { AuthContext } from '../authprovider/AuthProvider';
 
 
 const Sing = () => {
+    const navigate = useNavigate() 
     const {user,createUser} = useContext(AuthContext)
+    const location = useLocation();
+    console.log(location)
+
+    const from = location.state?.from?.pathname || '/';
+
+
     const submitSing =(event)=> {
         event.preventDefault()
         const name = event.target.name.value;
@@ -21,6 +28,7 @@ const Sing = () => {
             const logUser = result.user;
             event.target.reset();
             console.log(logUser);
+            navigate(from , {replace: true})
          })
          .then((error)=>{
             console.log(error)
